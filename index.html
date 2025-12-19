@@ -2,39 +2,46 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>Sonli Usullar Kalkulyatori</title>
+    <title>Sonli Usullar Pro</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Sonli Usullar Masalalari</h1>
+
+<div class="app-container">
+    <h1>Sonli Usullar Kalkulyatori</h1>
+    
+    <div class="formula-menu">
+        <button onclick="showMethod('iteratsiya')">1. Iteratsiya usuli</button>
+        <button onclick="showMethod('zeydel')">2. Zeydel usuli</button>
+        <button onclick="showMethod('nyuton')">3. Nyuton usuli</button>
+        <button onclick="showMethod('xorda')">4. Xordalar usuli</button>
+        <button onclick="showMethod('bolsano')">5. Boltsano-Koshi</button>
+        <button onclick="showMethod('lagranj')">6. Lagranj interpolyatsiyasi</button>
+        <button onclick="showMethod('trapeciya')">7. Trapeciya usuli</button>
+        <button onclick="showMethod('simpson')">8. Simpson usuli</button>
+        <button onclick="showMethod('galerkin')">9. Galerkin usuli</button>
+        <button onclick="showMethod('eyler')">10. Eyler usuli</button>
+    </div>
+
+    <div id="workspace" class="workspace" style="display:none;">
+        <h2 id="m-title"></h2>
+        <div id="m-formula" class="formula-box"></div>
         
-        <div class="methods-grid">
-            <div class="card" onclick="openModal('iteratsiya')">
-                <h3>1. Iteratsiya usuli</h3>
-            </div>
-            <div class="card" onclick="openModal('zeydel')">
-                <h3>2. Zeydel usuli</h3>
-            </div>
+        <div class="n-control">
+            <span>Elementlar soni (n):</span>
+            <input type="number" id="n-value" value="2" min="1">
+            <button class="generate-btn" onclick="generateInputs()">O'zgaruvchilarni yaratish</button>
         </div>
-    </div>
 
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="method-title">Usul nomi</h2>
-            <div id="formula-display" class="formula"></div>
-            
-            <div id="input-area">
-                </div>
-            
-            <button id="calc-btn" class="main-btn">Hisoblash</button>
-            <div id="result-area"></div>
-        </div>
+        <div id="dynamic-inputs" class="inputs-grid"></div>
+        
+        <button id="calc-btn" class="calc-btn">HISOBLASH</button>
+        
+        <div id="result" class="result-box"></div>
     </div>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
