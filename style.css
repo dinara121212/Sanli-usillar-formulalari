@@ -1,43 +1,16 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f4f9;
-    color: #333;
-}
+body { font-family: 'Arial', sans-serif; background: #f4f7f6; color: #333; }
+.app-container { max-width: 900px; margin: 20px auto; text-align: center; }
+.formula-menu { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 30px; }
+.formula-menu button { padding: 15px; border: none; background: #007bff; color: white; border-radius: 5px; cursor: pointer; font-weight: bold; }
+.formula-menu button:hover { background: #0056b3; }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+.workspace { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+.formula-box { background: #e9ecef; padding: 20px; margin: 15px 0; border-radius: 8px; font-size: 1.5em; }
 
-.formulaBlock {
-    max-width: 700px;
-    margin: 0 auto 25px auto;
-    padding: 15px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+.inputs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 20px 0; }
+.input-group { display: flex; align-items: center; background: #eee; padding: 5px; border-radius: 5px; }
+.input-group label { margin-right: 5px; font-weight: bold; color: #555; }
+.input-group input { width: 100%; border: 1px solid #ccc; padding: 8px; border-radius: 3px; }
 
-.formulaBlock h2 {
-    text-align: center;
-}
-
-.formulaBlock button {
-    margin: 5px;
-    padding: 8px 12px;
-    border-radius: 6px;
-    border: none;
-    background-color: #3498db;
-    color: white;
-    cursor: pointer;
-}
-
-.formulaBlock button:hover {
-    background-color: #2980b9;
-}
-
-#dynamicInputs input {
-    margin: 5px;
-    width: 60px;
-}
+.calc-btn { background: #28a745; color: white; padding: 15px 40px; border: none; border-radius: 50px; font-size: 1.2em; cursor: pointer; }
+.result-box { margin-top: 20px; font-size: 1.3em; color: #d9534f; font-weight: bold; }
