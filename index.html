@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Sonli Usullar Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+<body>
+
+<div class="app-container">
+    <h1>Sonli Usullar Kalkulyatori</h1>
+    
+    <div class="formula-menu">
+        <button onclick="showMethod('iteratsiya')">1. Iteratsiya usuli</button>
+        <button onclick="showMethod('zeydel')">2. Zeydel usuli</button>
+        <button onclick="showMethod('nyuton')">3. Nyuton usuli</button>
+        <button onclick="showMethod('xorda')">4. Xordalar usuli</button>
+        <button onclick="showMethod('bolsano')">5. Boltsano-Koshi</button>
+        <button onclick="showMethod('lagranj')">6. Lagranj interpolyatsiyasi</button>
+        <button onclick="showMethod('trapeciya')">7. Trapeciya usuli</button>
+        <button onclick="showMethod('simpson')">8. Simpson usuli</button>
+        <button onclick="showMethod('galerkin')">9. Galerkin usuli</button>
+        <button onclick="showMethod('eyler')">10. Eyler usuli</button>
+    </div>
+
+    <div id="workspace" class="workspace" style="display:none;">
+        <h2 id="m-title"></h2>
+        <div id="m-formula" class="formula-box"></div>
+        
+        <div class="n-control">
+            <span>Elementlar soni (n):</span>
+            <input type="number" id="n-value" value="2" min="1">
+            <button class="generate-btn" onclick="generateInputs()">O'zgaruvchilarni yaratish</button>
+        </div>
+
+        <div id="dynamic-inputs" class="inputs-grid"></div>
+        
+        <button id="calc-btn" class="calc-btn">HISOBLASH</button>
+        
+        <div id="result" class="result-box"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
