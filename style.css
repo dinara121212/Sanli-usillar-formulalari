@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulaBlock {
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.formulaBlock h2 {
+    text-align: center;
+}
+
+.formulaBlock button {
+    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+.formulaBlock button:hover {
+    background-color: #2980b9;
+}
+
+#dynamicInputs input {
+    margin: 5px;
+    width: 60px;
+}
